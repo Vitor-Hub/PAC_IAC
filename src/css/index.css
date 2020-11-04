@@ -1,6 +1,7 @@
 /* ---------------- Global CSS ---------------- */
 body {
   margin: 0;
+  padding: 0 200px;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -10,11 +11,32 @@ body {
 
 /* ---------------- HEADER CSS ---------------- */
 
-#header div {
+#header{
+  background-color: aquamarine;
+
+}
+
+#header #divHeader{
   display: flex;
+  justify-content: space-between;
+  padding: 10px;
 }
 
 #header div img{
   width: 55px;
   height: 45px;
+}
+
+#header #dropDown{
+  justify-content: center;
+}
+
+#header #dropDown >label{
+  cursor: pointer;
+}
+
+#header #dropDown #dropDownContent{
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
 }
