@@ -1,20 +1,19 @@
 /* ---------------- Global CSS ---------------- */
 body {
   margin: 0;
-  padding: 0 200px;
   font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: transparent linear-gradient(90deg, #6C1EB7 0%, #6E20B5 40%, #F7B01D 100%) 0% 0% no-repeat padding-box;
+}
+
+#mainPage{
+  margin: 0 220px;
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap');
 
 /* ---------------- HEADER CSS ---------------- */
-
-#header{
-  background-color: aquamarine;
-
-}
 
 #header #divHeader{
   display: flex;
@@ -29,14 +28,76 @@ body {
 
 #header #dropDown{
   justify-content: center;
-}
-
-#header #dropDown >label{
-  cursor: pointer;
-}
-
-#header #dropDown #dropDownContent{
   display: flex;
-  flex-direction: column;
+}
+
+#header #divHeader #dropDown span{
+  width: 100%;
+  border-bottom: none;
+  font-size: 16px;
+  margin: 0;
+  border: none;
+  font-weight: 600;
+  color: #fff;
+}
+
+#header #divHeader .logo{
+  display: flex;
+  color: #fff;
+  align-items: center;
+}
+
+#header #divHeader .logo > label{
   margin-left: 10px;
+}
+
+/* ---------------- BODY CSS ---------------- */
+
+#bodyComponent{
+  margin: 20px auto 0;
+}
+
+#bodyComponent .capa{
+  margin: auto;
+  width: 1000px;
+  height: 200px;
+  overflow: hidden;
+  position: relative;
+  background-image: url('./images/come_come.png');
+  background-size: contain;
+  background-position: center;
+}
+
+#bodyComponent .perfil img{
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 235px;
+  left: 273px;
+  border-radius: 50%;
+  border: 5px solid #6C1EB7;
+}
+
+#bodyComponent .cards .grid-container {
+  display: grid;
+  grid-column-gap: 50px;
+  grid-row-gap: 150px;
+  grid-template-columns: auto auto auto;
+  width: 1000px;
+  margin: 150px auto;
+}
+
+#bodyComponent .cards .grid-item {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  height: 350px;
+  border: 6px solid #fff;
+}
+
+#bodyComponent > label{
+  margin-left: 177px;
+  color: #fff;
+  font-weight: 500;
 }

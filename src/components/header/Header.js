@@ -1,33 +1,41 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import '../../css/index.css';
 import logo from '../../css/images/logo.png'
+import { DropDownListComponent } from '@syncfusion/ej2-react-dropdowns';
 
 const Header = () => {
 
-    const [dropDown, setDropDown] = React.useState(false);
+    const data = {
+        "titles":[
+            {"Name": "teste1"}
+        ]
+    }
 
-    const showDrop = () => {
-        if(dropDown){
-            setDropDown(false);
-        } else {
-            setDropDown(true);
-        }
+    const fields = { text: "Name" };
+
+    const templateItem = () => {
+        return(
+            <span>
+                <span>{data.Name}</span>
+            </span>
+        );
     }
 
     return (
         <header id="header">
             <div id="divHeader">
-                <img src={logo} />
+                <div className="logo">
+                    <img src={logo} alt=""/>
+                    <label>PAC</label>
+                </div>
                 <div id="dropDown">
-                    <label onClick={showDrop}>Dropdown</label>
-                    {dropDown &&
-                        <div id="dropDownContent">
-                            <label>teste1</label>
-                            <label>teste2</label>
-                            <label>teste3</label>
-                        </div>
-                    }
+                    <DropDownListComponent 
+                        id="dropDownList"
+                        itemTemplate={templateItem}
+                        placeholder="Meu Perfil"
+                        dataSource={data}
+                        fields={fields}
+                    />
                 </div>
             </div>
         </header>

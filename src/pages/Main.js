@@ -1,12 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import '../css/index.css';
 
 import Header from '../components/header/Header';
+import Body from '../components/body/Body';
 
 const Main = () => {
     return(
-        <Header/>
+        <div id="mainPage">
+            <Header/>
+            <Body/>
+        </div>
     )
 }
 
